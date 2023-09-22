@@ -1,5 +1,5 @@
 const Filter = require("bad-words")
-const filipinoBadwords = require("filipino-badwords-list");
+const filipinoBadwords = require("filipino-badwords-list")
 const filter = new Filter({ list: filipinoBadwords.array })
 
 const dotenv = require("dotenv")
@@ -38,10 +38,13 @@ client.on("message", (message) => {
 
 client.on("messageCreate", (message) => {
   if (message.author.bot) return
-  console.log(message.content)
   if (filter.isProfane(message.content)) {
+    const selectedMessage = replies[Math.floor(Math.random() * arr.length)]
+    console.log("User " + message.content)
+    console.log("Bot " + selectedMessage)
+
     message.reply({
-      content: "Bawal dito mag mura tanginah mo",
+      content: "selectedMessage",
     })
   }
 
