@@ -21,13 +21,14 @@ client.once("ready", () => {
 
 client.on("messageCreate", (message) => {
   if (message.author.bot) return
+  // console.log("Message: " + message.content)
   if (filter.isProfane(message.content)) {
-    const selectedMessage = replies[Math.floor(Math.random() * arr.length)]
-    console.log("User " + message.content)
-    console.log("Bot " + selectedMessage)
+    const selectedMessage = replies[Math.floor(Math.random() * replies.length)]
+    console.log("Curse: " + message.content)
+    console.log("Bot: " + selectedMessage)
 
     message.reply({
-      content: "selectedMessage",
+      content: selectedMessage,
     })
   }
 })
