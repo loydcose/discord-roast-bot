@@ -1,5 +1,6 @@
 const Filter = require("bad-words")
-const filter = new Filter()
+const filipinoBadwords = require("filipino-badwords-list");
+const filter = new Filter({ list: filipinoBadwords.array })
 
 const dotenv = require("dotenv")
 dotenv.config()

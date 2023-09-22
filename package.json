@@ -13,6 +13,7 @@
   "dependencies": {
     "bad-words": "^3.0.4",
     "discord.js": "^14.13.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "filipino-badwords-list": "^1.1.2"
   }
 }
